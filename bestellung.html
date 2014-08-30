@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bestellformular</title>
+        <link rel="stylesheet" type="text/css" href="css/bestellung.css">
+    </head>
+    <body>
+        <div id="container">
+        <h1>Bestellformular</h1>
+
+        <form name="order" method="post" action="bestellung.html">
+            <fieldset>
+                <legend>Versandadresse</legend>
+                <fieldset>
+                    <legend>Anrede</legend>
+                    <label class="first">
+                        <input type="radio" name="salutation" value="m">
+                        <span>Herr</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="salutation" value="f">
+                        <span>Frau</span>
+                    </label>
+                </fieldset>
+                <label>
+                    <span>Vorname</span>
+                    <input type="text" name="firstname" value="">
+                </label>
+                <label>
+                    <span>Nachname</span>
+                    <input type="text" name="lastname" value="">
+                </label>
+                <label>
+                    <span>Straße</span>
+                    <input type="text" name="street" value="">
+                </label>
+                <label>
+                    <span>Hausnummer</span>
+                    <input type="text" name="street_no" value="">
+                </label>
+                <label>
+                    <span>Postleitzahl</span>
+                    <input type="number" name="zip" value="">
+                </label>
+                <label>
+                    <span>Ort</span>
+                    <input type="text" name="city" value="">
+                </label>
+                <label>
+                    <span>Land</span>
+                    <select name="country">
+                        <option value="">-- Bitte wählen --</option>
+                        <option value="de">Deutschland</option>
+                        <option value="ch">Schweiz</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Informationen zur Kontaktaufnahme</legend>
+                <label>
+                    <span>E-Mail</span>
+                    <input type="email" name="email" value="">
+                </label>
+                <label>
+                    <span>Telefonnummer</span>
+                    <input type="tel" name="tel" value="">
+                </label>
+                <label>
+                    <span>Homepage</span>
+                    <input type="url" name="url" value="">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Geschenkoptionen</legend>
+                <label>
+                    <input type="checkbox" name="as_present" value="1">
+                    Als Geschenk verpacken
+                </label>
+                <label>
+                    <span>Farbe</span>
+                    <input type="color" name="color" value="">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Informationen zur Lieferung</legend>
+                <label>
+                    <span>Lieferdatum</span>
+                    <input type="date" name="date" value="">
+                </label>
+                <label>
+                    <span>Uhrzeit</span>
+                    <input type="time" name="time" value="">
+                </label>
+                <label>
+                    <span>Zahlungsmethode</span>
+                    <select name="pay_method">
+                        <option value="">-- Bitte wählen --</option>
+                        <option value="paypal">Paypal</option>
+                        <option value="cash">Bar</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Sonstiges</span>
+                    <textarea name="message"></textarea>
+                </label>
+            </fieldset>
+
+            <input type="submit" name="send" value="Bestellung absenden">
+            <input type="reset" name="reset" value="Zurücksetzen">
+        </form>
+    </body>
+</html>
